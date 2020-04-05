@@ -1,0 +1,57 @@
+#mynav {
+    top: 0;
+    margin: 0 auto;
+    background-color: aquamarine;
+}
+
+#mynav .a1  {
+    color: blue;
+    background-color: yellow;
+}
+
+#mynav .a1 .a2 {
+    color: blue;
+    background-color: green;
+    font-size: 20px;
+}
+
+#mynav.b1 {
+    color: blue;
+    background-color:yellow;
+    font-size: 20px;
+}
+#mynav.b1.b2 {
+    color: blue;
+    background-color: green;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+    /*shows elements in a column*/
+    ul{
+      flex-direction: column;
+    }
+    
+    /* deletes margin on top or bottom of the a tag*/
+    li{
+      margin: 0;
+    }
+   /* makes sure that the a tag will take the entire screen*/
+    a{
+      display: block;
+    }
+    button{
+        /*makes the button visible*/
+        display: block;
+        text-align: left;
+        /*since we are here, we can style it a little bit!*/
+        padding: 2vw;
+        font-size: 3vh;
+        background-color: #AFE0FF;
+        border: none;
+        
+        /*outline none removes the default blue border that appears anytime you click on the button*/
+        outline: none;        
+        cursor: pointer;
+      }
+  }

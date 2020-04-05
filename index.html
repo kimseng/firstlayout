@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="refresh" content="5"/> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Business</title>
+    <link href="css/sh-globalnav.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <nav id="sh_globalnav">
+       <ul id="myTopnav" class="sh_gn_header">
+        <li class="sh_gn_link" >
+            <div class="sh_gn_hamburger"><a href="javascript:void(0);" class="icon" onclick="clickHamburger()">
+            <i class="fa fa-bars"></i>
+          </a></div>
+          <div class="sh_gn_logo">
+          <a class="sh_gn_link_apple_center" href="#home"></a></div>
+        </li>
+          <li class="sh_gn_menu_item sh_gn_link_apple"><a href="#home"></a></li>
+           <li class="sh_gn_menu_item"><a href="#home">Home</a></li>
+           <li class="sh_gn_menu_item"><a href="#ob">Online Business</a></li>
+           <li class="sh_gn_menu_item"><a href="#pi">Passive Income</a></li>
+           <li class="sh_gn_menu_item"><a href="#blog">Blog</a></li>
+           <li class="sh_gn_menu_item"><a href="#au">About Us</a></li>
+           
+       </ul>
+    </nav>
+    <script>
+        function clickHamburger() {
+          var x = document.getElementById("myTopnav");
+
+          if (x.className === "sh_gn_header") {
+            x.className += " responsive";
+          } else {
+            x.className = "sh_gn_header";
+          }
+        }
+        </script>
+    <!-- <script src="js/sh-globalnav.js"></script> -->
+</body>
+
+</html>

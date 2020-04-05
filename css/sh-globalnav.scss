@@ -1,0 +1,150 @@
+
+$sh_globalnav_bg_color:rgba(0, 0, 0, 0.92);;
+
+body {
+    margin: 0;
+    // font-family: Arial, Helvetica, sans-serif;
+    font-family: "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+  }
+#sh_globalnav {
+    width: 100vw;    
+    background: $sh_globalnav_bg_color;
+    // border: 1px dotted red;
+    text-align: center;
+}
+#sh_globalnav .sh_gn_header{
+    margin: 0;
+    padding: 0;
+    display: flex;  //default flex-direction: row;
+    // align-items: center;
+    justify-content: center;
+}
+#sh_globalnav .sh_gn_menu_item{
+    list-style-type: none;
+    margin: 0 2vw;    //0 for top and bottom , 2vw for left and right
+    font-size: 17px;
+    padding: 3px 6px;
+    letter-spacing: -.01em;
+    // border: 1px dotted maroon;
+}
+#sh_globalnav .sh_gn_link{
+    width: 100%;
+    display: flex;
+    border: 1px dashed red;    
+}
+#sh_globalnav .sh_gn_link .sh_gn_hamburger{
+    justify-content: left;
+    width: 50%;
+    border: 1px solid yellow;
+}
+#sh_globalnav .sh_gn_link .sh_gn_logo{    
+    justify-content: left;
+    border: 1px solid white;
+}
+
+#sh_globalnav .sh_gn_link_apple {
+    background-size: 16px 44px;
+    background-repeat: no-repeat;
+    background-image: url(../images/gn/logo_ob.svg);
+    background-position: center center;
+    width: 16px;
+}
+#sh_globalnav .sh_gn_link_apple_center {
+    background-size: 16px 44px;
+    background-repeat: no-repeat;
+    background-image: url(../images/gn/logo_ob.svg);
+    background-position: center center;
+    width: 16px;
+    border: 1px solid greenyellow;
+}
+/* li{
+    list-style-type: none;
+    margin: 0 2vw;    //0 for top and bottom , 2vw for left and right
+    font-size: 17px;
+    padding: 3px 6px;
+    letter-spacing: -.01em;
+    border: 1px dotted maroon;
+} */
+
+a {
+    text-decoration: none;
+    color: #f5f5f7;
+    opacity: .8;
+    transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+a:hover{
+    color:#C6E9FF;
+}
+li .icon{
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    .sh_gn_header{
+        flex-direction: column;    
+        }
+    .sh_gn_header .sh_gn_menu_item {display: none; }
+    .sh_gn_header .sh_gn_link_apple {
+        display: none;
+    }
+    .sh_gn_header .sh_gn_link_apple_center {
+        display: inline-flex;
+    }
+    // .topnav li a:not(:first-child) {display: none;}
+    .sh_gn_header a.icon {
+        float: left;
+        display: block;
+        padding: 3px 6px;
+    }
+}
+  
+@media screen and (max-width: 800px) {
+    .sh_gn_header.responsive {
+        position: relative;        
+    }
+    .sh_gn_header.responsive .icon {
+        position: relative;
+        right: 0;
+        top: 0;
+        padding: 3px 6px;
+        font-size: 17px;
+    }    
+    .sh_gn_header.responsive .sh_gn_menu_item {
+        margin: 0px;
+        padding: 3px 6px;
+        font-size: 17px;
+        float:none;
+        display:block;
+        text-align: left;
+        color: #f5f5f7;
+    }
+}
+  
+  
+
+
+
+// #sh-globalnav .sh-gn-header+.sh-gn-list {
+//     top: 48px
+// }
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+
+/* @media screen and (max-width: 1080px) {
+    .sh-gn-list li a:not(:first-child) {display: none;}
+    .sh-gn-list li a.icon {
+      float: right;
+      display: block;
+    }
+    
+  } */
+
+  
+
+#sh-globalnav, #sh-globalnav select, #sh-globalnav button, #sh-gn-segmentbar, #sh-gn-segmentbar select, #sh-gn-segmentbar button {
+    font-family: "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+}
+
+#sh-globalnav input, #sh-globalnav textarea, #sh-gn-segmentbar input, #sh-gn-segmentbar textarea {
+    font-family: "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+}
