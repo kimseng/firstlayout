@@ -4,51 +4,71 @@ body {
 }
 
 #sh_globalnav {
+  position: fixed;
   width: 100vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background: rgba(0, 0, 0, 0.92);
   text-align: center;
+  padding: 10px 0px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#sh_globalnav nav ul li {
+  list-style: none;
+}
+
+#sh_globalnav nav ul li a {
+  text-decoration: none;
+  line-height: 80px;
+  text-transform: uppercase;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#sh_globalnav .sh_gn_menulist {
+  float: right;
+  margin: 0;
+  padding: 0;
+  border: 1px solid seashell;
 }
 
 #sh_globalnav .sh_gn_header {
+  list-style: none;
   margin: 0;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  border: 2px dotted blue;
 }
 
 #sh_globalnav .sh_gn_menu_item {
   list-style-type: none;
   margin: 0 2vw;
   font-size: 17px;
-  padding: 3px 6px;
+  padding: 3px 3px;
   letter-spacing: -.01em;
 }
 
-#sh_globalnav .sh_gn_link {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border: 1px dashed red;
-}
-
-#sh_globalnav .sh_gn_link .sh_gn_hamburger {
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  width: 50%;
+#sh_globalnav .sh_gn_menu {
+  float: left;
+  -webkit-transition: .3s;
+  transition: .3s;
   border: 1px solid yellow;
 }
 
-#sh_globalnav .sh_gn_link .sh_gn_logo {
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  border: 1px solid white;
+#sh_globalnav .sh_gn_hamburger {
+  float: left;
+  border: 1px solid yellow;
+}
+
+#sh_globalnav .sh_gn_logo {
+  font-size: 17px;
+  margin: 0 2vw;
+  padding: 7px 7px;
+  border: 1px solid green;
 }
 
 #sh_globalnav .sh_gn_link_apple {
@@ -59,13 +79,12 @@ body {
   width: 16px;
 }
 
-#sh_globalnav .sh_gn_link_apple_center {
+#sh_globalnav .sh_gn_link .sh_gn_link_apple_center {
   background-size: 16px 44px;
   background-repeat: no-repeat;
   background-image: url(../images/gn/logo_ob.svg);
   background-position: center center;
   width: 16px;
-  border: 1px solid greenyellow;
 }
 
 /* li{
@@ -89,7 +108,7 @@ a:hover {
 }
 
 li .icon {
-  display: none;
+  display: block;
 }
 
 @media screen and (max-width: 800px) {
@@ -102,13 +121,17 @@ li .icon {
   .sh_gn_header .sh_gn_menu_item {
     display: none;
   }
-  .sh_gn_header .sh_gn_link_apple {
-    display: none;
+  #sh_globalnav .sh_gn_menu {
+    float: inherit;
+    -webkit-transition: .3s;
+    transition: .3s;
+    border: 1px solid yellow;
   }
-  .sh_gn_header .sh_gn_link_apple_center {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+  #sh_globalnav .sh_gn_menulist {
+    float: inherit;
+    margin: 0;
+    padding: 0;
+    border: 1px solid seashell;
   }
   .sh_gn_header a.icon {
     float: left;

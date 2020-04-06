@@ -7,41 +7,69 @@ body {
     font-family: "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif
   }
 #sh_globalnav {
-    width: 100vw;    
+    position: fixed;
+    width: 100vw;   
+    // height: 100px; 
+    box-sizing: border-box;
     background: $sh_globalnav_bg_color;
     // border: 1px dotted red;
     text-align: center;
+    padding: 10px 0px;
+    transition: .3s;
 }
-#sh_globalnav .sh_gn_header{
+#sh_globalnav nav ul li {
+    list-style: none;
+}
+#sh_globalnav nav ul li a {
+    text-decoration: none;
+    line-height: 80px;
+    text-transform: uppercase;
+    transition: .3s;
+}
+#sh_globalnav .sh_gn_menulist{
+    float: right;
     margin: 0;
     padding: 0;
-    display: flex;  //default flex-direction: row;
+    border: 1px solid seashell;
+}
+#sh_globalnav .sh_gn_header{
+    list-style: none;
+    margin: 0;
+    padding: 0;   
+    display: flex;
     // align-items: center;
-    justify-content: center;
+    // justify-content: center; 
+    border: 2px dotted blue;
 }
 #sh_globalnav .sh_gn_menu_item{
     list-style-type: none;
     margin: 0 2vw;    //0 for top and bottom , 2vw for left and right
     font-size: 17px;
-    padding: 3px 6px;
+    padding: 3px 3px;
     letter-spacing: -.01em;
-    // border: 1px dotted maroon;
-}
-#sh_globalnav .sh_gn_link{
-    width: 100%;
-    display: flex;
-    border: 1px dashed red;    
-}
-#sh_globalnav .sh_gn_link .sh_gn_hamburger{
-    justify-content: left;
-    width: 50%;
-    border: 1px solid yellow;
-}
-#sh_globalnav .sh_gn_link .sh_gn_logo{    
-    justify-content: left;
-    border: 1px solid white;
+    // border: 1px dotted greenyellow;
 }
 
+#sh_globalnav .sh_gn_menu{
+    float: left;
+    transition: .3s;
+    border: 1px solid yellow;
+}
+#sh_globalnav .sh_gn_hamburger{
+    // justify-content: left;
+    // width: 50%;
+    float: left;
+    
+    border: 1px solid yellow;
+}
+
+#sh_globalnav .sh_gn_logo{  
+    font-size: 17px;
+    margin: 0 2vw;
+    padding: 7px 7px;  //top, right, bottom, left
+    // float: right;
+    border: 1px solid green;
+}
 #sh_globalnav .sh_gn_link_apple {
     background-size: 16px 44px;
     background-repeat: no-repeat;
@@ -49,13 +77,13 @@ body {
     background-position: center center;
     width: 16px;
 }
-#sh_globalnav .sh_gn_link_apple_center {
+#sh_globalnav .sh_gn_link .sh_gn_link_apple_center {
     background-size: 16px 44px;
     background-repeat: no-repeat;
     background-image: url(../images/gn/logo_ob.svg);
     background-position: center center;
     width: 16px;
-    border: 1px solid greenyellow;
+    // border: 1px solid greenyellow;
 }
 /* li{
     list-style-type: none;
@@ -76,21 +104,27 @@ a:hover{
     color:#C6E9FF;
 }
 li .icon{
-    display: none;
+    display: block;
 }
 
 @media screen and (max-width: 800px) {
     .sh_gn_header{
         flex-direction: column;    
         }
-    .sh_gn_header .sh_gn_menu_item {display: none; }
-    .sh_gn_header .sh_gn_link_apple {
-        display: none;
+    .sh_gn_header .sh_gn_menu_item {display: none; }   
+    #sh_globalnav .sh_gn_menu{
+        float: inherit;
+        transition: .3s;
+        border: 1px solid yellow;
     }
-    .sh_gn_header .sh_gn_link_apple_center {
-        display: inline-flex;
+    #sh_globalnav .sh_gn_menulist{
+        float: inherit;
+        margin: 0;
+        padding: 0;
+        border: 1px solid seashell;
     }
-    // .topnav li a:not(:first-child) {display: none;}
+    
+   
     .sh_gn_header a.icon {
         float: left;
         display: block;

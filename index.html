@@ -13,22 +13,37 @@
 
 <body>
     <nav id="sh_globalnav">
-       <ul id="myTopnav" class="sh_gn_header">
-        <li class="sh_gn_link" >
-            <div class="sh_gn_hamburger"><a href="javascript:void(0);" class="icon" onclick="clickHamburger()">
-            <i class="fa fa-bars"></i>
-          </a></div>
-          <div class="sh_gn_logo">
-          <a class="sh_gn_link_apple_center" href="#home"></a></div>
-        </li>
-          <li class="sh_gn_menu_item sh_gn_link_apple"><a href="#home"></a></li>
+       <!--  
+        <li class="menu-box">
+            <ul class="sh_gn_menu_wrap">
+                <li class="sh_gn_hamburger_box" >
+                         
+                </li>
+                <li class="sh_gn_logo_box">
+                    
+                </li>
+            </ul>
+         </li> -->
+         <div class="sh_gn_menu">
+            <div class="sh_gn_hamburger">
+                <a href="javascript:void(0);" class="icon" onclick="clickHamburger()">
+                    <i class="fa fa-bars"></i>
+                </a>     
+            </div>
+            <div class="sh_gn_logo">
+                <a class=" sh_gn_link_apple_center" href="#home"></a>
+            </div>
+        </div>
+        <div class="sh_gn_menulist">
+        <ul id="myTopnav" class="sh_gn_header">         
+          <!-- <li class="sh_gn_menu_item sh_gn_link_apple"><a href="#home"></a></li> -->
            <li class="sh_gn_menu_item"><a href="#home">Home</a></li>
            <li class="sh_gn_menu_item"><a href="#ob">Online Business</a></li>
            <li class="sh_gn_menu_item"><a href="#pi">Passive Income</a></li>
            <li class="sh_gn_menu_item"><a href="#blog">Blog</a></li>
-           <li class="sh_gn_menu_item"><a href="#au">About Us</a></li>
-           
+           <li class="sh_gn_menu_item"><a href="#au">About Us</a></li>           
        </ul>
+    </div>
     </nav>
     <script>
         function clickHamburger() {
